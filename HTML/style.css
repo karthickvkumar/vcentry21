@@ -1,0 +1,14 @@
+h1 {
+  color: rgb(12, 31, 201);
+  text-align: center;
+  text-decoration: underline;
+  text-transform: lowercase;
+  /* letter-spacing: 10px; */
+  word-spacing: 20px;
+  text-shadow: 3px 3px 6px rgb(148, 0, 148);
+}
+
+p{
+  text-indent: 150px;
+  line-height: 4;
+}
