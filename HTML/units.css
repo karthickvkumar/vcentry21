@@ -11,11 +11,38 @@
 .block-2{
   width: 50vw;
   height: 25vh;
-  background-color: blue;
+  background-color: #e91e63;
 }
 
 .block-3{
   width: 50%;
   height: 50%;
   background-color: green;
+}
+
+.border{
+    /* border-style: solid; */
+    /* background-color: chartreuse; */
+    /* color: white; */
+    border-width: 3px;
+    /* border-color: darkblue; */
+    border-top-style: dashed;
+    border-bottom-style: solid;
+    border-left-style: double;
+    border-top-color: crimson;
+    border-bottom-color: blue;
+    /*border: 2px solid #9c27b0;  */
+    border-radius: 15px;
+}
+
+.padding{
+  border: 2px solid;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 20px;
+}
+
+.margin{
+  margin-left: 50px;
+    margin-top: 30px;
 }
