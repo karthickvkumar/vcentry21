@@ -7,3 +7,15 @@
 .heading-block {
   color : white;
 }
+
+.block-2{
+  width: 50vw;
+  height: 25vh;
+  background-color: blue;
+}
+
+.block-3{
+  width: 50%;
+  height: 50%;
+  background-color: green;
+}
