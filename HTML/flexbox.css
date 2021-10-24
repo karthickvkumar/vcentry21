@@ -16,3 +16,9 @@
 .align-individual{
   align-self: flex-start;
 }
+
+.bg-image{
+  background-image: url("./shinchu.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
