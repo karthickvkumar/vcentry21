@@ -29,3 +29,30 @@
   width: 80%;
   border: 2px solid green;
 }
+
+.heading{
+ height: 45%;
+ border : 2px solid brown;
+ display: flex;
+ flex-direction: row;
+}
+
+.sub-heading{
+  border : 2px solid orange;
+  height: 52%;
+}
+
+.heading-row-1{
+  border: 2px solid red;
+  width: 10%;
+}
+
+.heading-row-2{
+  border: 2px solid blue;
+  width: 75%;
+}
+
+.heading-row-3{
+  border: 2px solid green;
+  width: 15%;
+}
