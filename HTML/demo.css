@@ -56,3 +56,27 @@
   border: 2px solid green;
   width: 15%;
 }
+
+.image-block{
+  border: 2px solid;
+  width: 26%;
+}
+
+.evently {
+  justify-content: space-evenly;
+}
+
+.section-image{
+  border: 2px solid;
+  height: 70%;
+}
+
+.section-heading{
+  border: 2px solid;
+  height: 15%;
+}
+
+.section-sub-heading{
+  border: 2px solid;
+  height: 10%;
+}
