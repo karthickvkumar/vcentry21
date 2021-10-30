@@ -64,3 +64,46 @@ console.log(student_information);
 //To delete a existing Record -> delete object_variable_name.key
 delete student_information.rollnumber;
 console.log(student_information)
+
+//Array -> It is a collection of List data (List of Data)
+//Syntax of creating an Array
+// var variable_name = [ value_1, value_2, .... , Value_n ];
+
+var name_list = ["Karthick", "Kumar", "Ankit", "Harsh", "Yuvaraj"];
+console.log(name_list);
+
+var total_marks = [68, 78, 57, 34, 51, 44];
+console.log(total_marks);
+
+var student_list = [
+  {
+    name : "karthick",
+    rollnumber : 479855655,
+    std : "VI",
+    section : "A",
+    score : 450
+  },
+  {
+    name : "Kumar",
+    rollnumber : 479855655,
+    std : "VI",
+    section : "A",
+    score : 450
+  },
+  {
+    name : "Ankit",
+    rollnumber : 479855655,
+    std : "VI",
+    section : "A",
+    score : 450
+  },
+  {
+    name : "Yuviraj",
+    rollnumber : 479855655,
+    std : "VI",
+    section : "A",
+    score : 450
+  }
+]
+
+console.log(student_list)
