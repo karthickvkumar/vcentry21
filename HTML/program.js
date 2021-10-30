@@ -16,3 +16,34 @@ console.log(user_name);
 
 var result = true;
 console.log(result);
+
+//Undefined -> Variable has been initialized but value not assigned
+
+var input_data;
+console.log(input_data);
+
+var student_name = "karthick";
+var student_rollnumber = 479855655;
+var student_std = "VI";
+var student_section = "A";
+var stuent_score = 450;
+
+//Object -> Set of key / Value Pair
+
+// var variable_name = {
+//   key : value,
+//   key : value
+// }
+
+// key -> text value, It should contain only a-z, A-Z, underscore _
+
+var student_information = {
+  name : "karthick",
+  rollnumber : 479855655,
+  std : "VI",
+  section : "A",
+  score : 450
+}
+console.log(student_information);
+
+//Object -> 4 operation = Read value, Insert new value, Edit exisiting value, Delete existing value. 
