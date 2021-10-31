@@ -69,8 +69,6 @@ console.log(student_information)
 //Syntax of creating an Array
 // var variable_name = [ value_1, value_2, .... , Value_n ];
 
-var name_list = ["Karthick", "Kumar", "Ankit", "Harsh", "Yuvaraj"];
-console.log(name_list);
 
 var total_marks = [68, 78, 57, 34, 51, 44];
 console.log(total_marks);
@@ -129,3 +127,28 @@ function display_object(){
 
   console.log(employee)
 }
+
+// Operation in Array -> 4 Operation = Insert a new value, Read the Value, Edit the exiting value, Delete the value
+
+var name_list = ["Karthick", "Kumar", "Ankit", "Harsh", "Yuvaraj"];
+
+//push() - Insert a new value at the end of array record
+// array_variable_name.push(value_1, value_2, ... , value_n);
+name_list.push("Manoj");
+
+//unshift() -> Insert a new value at the start of array record
+name_list.unshift("Mr.ABC");
+
+//To Read value from Array
+// array_variable_name[index]
+console.log(name_list[1])
+
+//To edit a value from Array
+// array_variable_name[index] = new value;
+name_list[1] = "Mr.XYZ";
+console.log(name_list);
+
+//To delete an value 
+// array_variable_name.splice(index, 1);
+name_list.splice(6, 1)
+console.log(name_list)
