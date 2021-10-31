@@ -152,3 +152,42 @@ console.log(name_list);
 // array_variable_name.splice(index, 1);
 name_list.splice(6, 1)
 console.log(name_list)
+
+//Operations 
+/* 
+1. Arithmetic Operator -> +, -, *, /, %, ++, --
+2. Assignment Operator -> =, == 
+3. Comparision Operator -> <, <=, >, >=
+4. Logical Operator -> &&, ||, !
+*/
+
+
+//Syntax - if else conditon
+/*
+  if(conditon) {
+    // code block will execute if the condition is Truthy.
+  }
+  else{
+    // code block will execute if the condition is Falsy.
+  }
+*/
+
+/*
+Problem Statement :  To check whether the given person age is eligible for Voting in India.
+1. I want to pass age(Number) as an Input value 
+2. I want to evaluate whether the given age (number) is greater than 18
+3. If the age is greater than 18, we can print a message -> The person is eligible for Voting.
+4. If the age is less then 18, we can print a message -> The person is not eligible for Voting.
+*/
+
+function check_voting(){
+  var value = prompt("Enter you AGE :");
+  var age = parseInt(value);
+
+  if(age >= 18){
+    console.log("The person is eligible for Voting.")
+  }
+  else{
+    console.log("The person is not eligible for Voting.")
+  }
+}
