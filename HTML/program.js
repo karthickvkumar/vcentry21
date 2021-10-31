@@ -256,3 +256,93 @@ function print_even_numbers(){
     }
   }
 }
+
+
+/*Syntax - for in (loop) - Used to iterate Object properties
+for(var key in object_variable_name){
+ // coding
+}
+*/
+for(var key in student_information){
+  console.log("The key of object ",key);
+  console.log("The value of object ",student_information[key]);
+}
+
+/*Syntax - for of (loop) - Used to iterate list of Array
+for(var value of array_variable_name){
+ // coding
+}
+*/
+var student_List = [];
+for(var value of student_List){
+  console.log(value);
+}
+
+/*Syntax - While (loop)
+while(condition){
+ // loop code block
+}
+*/
+
+var count = 1;
+while(count <= 10){
+  console.log("The count is ", count);
+  count++
+}
+
+/*Syntax - While (loop)
+do{
+ // code block      
+}while(condition)
+*/
+
+var count = 1;
+do{
+  console.log("The count is ", count);
+  count++
+}while(count <= 10)
+
+/*Syntax - Switch Case
+switch(expression){
+  case value :
+    // code block
+    break;
+  case value :
+    // code block
+    break;
+  default:
+    //code block
+}
+*/
+
+
+function find_weekday(){
+  var value = prompt("Enter a number from 0 - 6")
+  var day = parseInt(value);
+
+  switch(day){
+    case 0:
+      console.log("Sunday");
+      break;
+    case 1:
+      console.log("Monday");
+      break;
+    case 2:
+      console.log("Tuesday");
+      break;
+    case 3:
+      console.log("Wednesday");
+      break;
+    case 4:
+      console.log("Thursday");
+      break;
+    case 5:
+      console.log("Friday");
+      break;
+    case 6:
+      console.log("Saturday");
+      break;
+    default:
+      console.log('Out of range')
+  }
+}
