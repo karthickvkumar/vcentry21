@@ -107,3 +107,25 @@ var student_list = [
 ]
 
 console.log(student_list)
+
+// Function -> Block of Code
+// Syntax 
+// --> Function Definition
+// function function_name(){
+//   // code block
+// }
+// function_name -> It should be a text value, It contain a-z, A-Z, 0-9, _, $
+
+// --> Function Call / Function Invocation
+// function_name();
+
+function display_object(){
+  var employee = {
+    name : 'Karthick',
+    age : 28,
+    location : "Chennai",
+    desicnation : "UI Developer"
+  }
+
+  console.log(employee)
+}
