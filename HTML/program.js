@@ -38,11 +38,11 @@ var stuent_score = 450;
 // key -> text value, It should contain only a-z, A-Z, underscore _
 
 var student_information = {
-  name : "karthick",
-  rollnumber : 479855655,
-  std : "VI",
-  section : "A",
-  score : 450
+  name: "karthick",
+  rollnumber: 479855655,
+  std: "VI",
+  section: "A",
+  score: 450
 }
 console.log(student_information);
 
@@ -75,32 +75,32 @@ console.log(total_marks);
 
 var student_list = [
   {
-    name : "karthick",
-    rollnumber : 479855655,
-    std : "VI",
-    section : "A",
-    score : 450
+    name: "karthick",
+    rollnumber: 479855655,
+    std: "VI",
+    section: "A",
+    score: 450
   },
   {
-    name : "Kumar",
-    rollnumber : 479855655,
-    std : "VI",
-    section : "A",
-    score : 450
+    name: "Kumar",
+    rollnumber: 479855655,
+    std: "VI",
+    section: "A",
+    score: 450
   },
   {
-    name : "Ankit",
-    rollnumber : 479855655,
-    std : "VI",
-    section : "A",
-    score : 450
+    name: "Ankit",
+    rollnumber: 479855655,
+    std: "VI",
+    section: "A",
+    score: 450
   },
   {
-    name : "Yuviraj",
-    rollnumber : 479855655,
-    std : "VI",
-    section : "A",
-    score : 450
+    name: "Yuviraj",
+    rollnumber: 479855655,
+    std: "VI",
+    section: "A",
+    score: 450
   }
 ]
 
@@ -117,12 +117,12 @@ console.log(student_list)
 // --> Function Call / Function Invocation
 // function_name();
 
-function display_object(){
+function display_object() {
   var employee = {
-    name : 'Karthick',
-    age : 28,
-    location : "Chennai",
-    desicnation : "UI Developer"
+    name: 'Karthick',
+    age: 28,
+    location: "Chennai",
+    desicnation: "UI Developer"
   }
 
   console.log(employee)
@@ -180,14 +180,15 @@ Problem Statement :  To check whether the given person age is eligible for Votin
 4. If the age is less then 18, we can print a message -> The person is not eligible for Voting.
 */
 
-function check_voting(){
+function check_voting() {
+  console.log(name_list);
   var value = prompt("Enter you AGE :");
   var age = parseInt(value);
 
-  if(age >= 18){
+  if (age >= 18) {
     console.log("The person is eligible for Voting.")
   }
-  else{
+  else {
     console.log("The person is not eligible for Voting.")
   }
 }
@@ -212,20 +213,27 @@ function check_voting(){
 3. idenfity -> greater then 60 -> The person is Super Citizen
 */
 
-function check_person_category(){
-  var value = prompt("Enter the Person AGE :");
-  var age = parseInt(value);
+function check_person_category() {
+  try {
+    var value = prompt("Enter the Person AGE :");
+    //var age = parseInt(value);
 
-  if(age < 18){
-    console.log("The person is Minor");
+    if (age < 18) {
+      console.log("The person is Minor");
+    }
+    else if (age >= 18 && age < 60) {
+      console.log("The person is Major")
+    }
+    else {
+      console.log("The person is Super Citizen");
+    }
   }
-  else if(age >= 18 && age < 60){
-    console.log("The person is Major")
-  }
-  else{
-    console.log("The person is Super Citizen");
+  catch (error) {
+    console.error(error);
+    alert("Something went wrong, pls contact admin")
   }
 }
+
 
 /* 
 Syntax - for (loop)
@@ -234,7 +242,7 @@ for(initialization;  condition; increment/decrement){
 }
 */
 
-for(var count = 1; count <= 10; count++){
+for (var count = 1; count <= 10; count++) {
   console.log("Loop is running on count", count);
 }
 
@@ -246,12 +254,12 @@ Solution:
 3. Repeat this logic till n number
 */
 
-function print_even_numbers(){
+function print_even_numbers() {
   var value = prompt("Enter the Limit for Finding Even Numbers");
   var limit = parseInt(value);
 
-  for(var count = 1; count <= limit; count++){
-    if(count % 2 == 0){
+  for (var count = 1; count <= limit; count++) {
+    if (count % 2 == 0) {
       console.log("The even number is ", count)
     }
   }
@@ -263,9 +271,9 @@ for(var key in object_variable_name){
  // coding
 }
 */
-for(var key in student_information){
-  console.log("The key of object ",key);
-  console.log("The value of object ",student_information[key]);
+for (var key in student_information) {
+  console.log("The key of object ", key);
+  console.log("The value of object ", student_information[key]);
 }
 
 /*Syntax - for of (loop) - Used to iterate list of Array
@@ -274,7 +282,7 @@ for(var value of array_variable_name){
 }
 */
 var student_List = [];
-for(var value of student_List){
+for (var value of student_List) {
   console.log(value);
 }
 
@@ -285,7 +293,7 @@ while(condition){
 */
 
 var count = 1;
-while(count <= 10){
+while (count <= 10) {
   console.log("The count is ", count);
   count++
 }
@@ -297,10 +305,10 @@ do{
 */
 
 var count = 1;
-do{
+do {
   console.log("The count is ", count);
   count++
-}while(count <= 10)
+} while (count <= 10)
 
 /*Syntax - Switch Case
 switch(expression){
@@ -316,11 +324,11 @@ switch(expression){
 */
 
 
-function find_weekday(){
+function find_weekday() {
   var value = prompt("Enter a number from 0 - 6")
   var day = parseInt(value);
 
-  switch(day){
+  switch (day) {
     case 0:
       console.log("Sunday");
       break;
