@@ -5,6 +5,7 @@ import LoginPage from "./pages/login";
 import HomePage from "./pages/home";
 import ContactPage from "./pages/contact";
 import AboutPage from "./pages/about";
+import Mail from "./pages/mail";
 
 import "./css/style.css"; 
 
@@ -18,6 +19,7 @@ class App extends Component{
           <Route path="/login" component={LoginPage}></Route>
           <Route path="/contact-us" component={ContactPage}></Route>
           <Route path="/about" component={AboutPage}></Route>
+          <Route path="/mail" component={Mail}></Route>
         </Switch>
       </BrowserRouter>
     )

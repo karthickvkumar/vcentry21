@@ -8,3 +8,46 @@
   font-size: 18px;
   color: blue;
 }
+
+.header{
+  border: 2px solid red;
+  height: 10vh;
+}
+
+.body{
+  border: 2px solid;
+  height: 86vh;
+  display: flex;
+  flex-direction: row;
+}
+
+.sidebar{
+  border: 2px solid blue;
+  width: 20%;
+}
+
+.content{
+  border: 2px solid red;
+  width: 80%;
+}
+
+.custom-button{
+  text-decoration: none;
+  border: 1px solid;
+  font-size: 24px;
+  padding-left: 25px;
+  padding-right: 25px;
+  color: white;
+  background-color: black;
+}
+
+.button-space{
+  margin-top: 5px;
+  margin-bottom: 5px;
+  display: flex;
+  justify-content: center;
+}
+
+.active-button{
+  background-color: blue;
+}
