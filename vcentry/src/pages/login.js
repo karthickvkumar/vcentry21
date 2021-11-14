@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import {NavLink} from "react-router-dom";
 
 class LoginPage extends Component{
 
@@ -6,6 +7,7 @@ class LoginPage extends Component{
     return(
       <div>
         <h1>This is a Login Page</h1>
+        <NavLink to="/">Go Back</NavLink>
       </div>
     )
   }
