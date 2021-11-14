@@ -1,13 +1,25 @@
 import React, { Component } from 'react';
+import {BrowserRouter, Route, Switch} from 'react-router-dom';
+
+import LoginPage from "./pages/login";
+import HomePage from "./pages/home";
+import ContactPage from "./pages/contact";
+import AboutPage from "./pages/about";
+
+import "./css/style.css"; 
 
 class App extends Component{
 
   render(){
     return(
-      <div>
-        <h1>Welcome to React JS</h1>
-        <h1>This output is comming from App.js</h1>
-      </div>
+      <BrowserRouter>
+        <Switch>
+          <Route path="/" exact component={HomePage}></Route>
+          <Route path="/login" component={LoginPage}></Route>
+          <Route path="/contact-us" component={ContactPage}></Route>
+          <Route path="/about" component={AboutPage}></Route>
+        </Switch>
+      </BrowserRouter>
     )
   }
 }
