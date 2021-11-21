@@ -65,11 +65,18 @@ class ContactPage extends Component{
           <button onClick={() => this.showHideIfElse()}>Show and Hide If-Else</button>
           {
             this.state.showIfElse ?
-            <h1>Successfully Authenticated</h1>
+            <div>
+              <h1>Successfully Authenticated</h1>
+              <img src={require("../images/shinchu.jpg").default} style={{ width: "400px" }}/>
+            </div>
             :
-            <h1>Sorry! Faild to Authenticate</h1>
+            <div>
+              <h1>Sorry! Faild to Authenticate</h1>
+              <img src={"http://prod-upp-image-read.ft.com/a4e8f394-313b-11ea-a329-0bcf87a328f2"} style={{ width: "400px" }}/> 
+            </div>
           }
         </div>
+
       </div>
     )
   }
