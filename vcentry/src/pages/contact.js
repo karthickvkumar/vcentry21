@@ -7,6 +7,7 @@ class ContactPage extends Component{
     this.state = {
       email_id : "",
       password : "",
+      isPasswordVisible : false,
       show : true,
       showIfElse : true
     }
@@ -35,6 +36,12 @@ class ContactPage extends Component{
     })
   }
 
+  isPasswordVisible(){
+    this.setState({
+      isPasswordVisible : !this.state.isPasswordVisible
+    })
+  }
+
   render(){
     var username = "Karthick Kumar"; 
 
@@ -45,9 +52,14 @@ class ContactPage extends Component{
           <label className="label">Enter your Email ID :</label>
           <input className="input" type="text" placeholder="Please enter your email id.." onChange={this.onInputChange} name="email_id"/>
         </div>
-        <div className="m-bottom-8">
+        <div className="m-bottom-8 icon-align">
           <label className="label">Enter your Password :</label>
-          <input className="input" type="password" placeholder="Please enter your password.." onChange={this.onInputChange} name="password"/>
+          <input className="input" type={this.state.isPasswordVisible ? "text" : "password"} placeholder="Please enter your password.." onChange={this.onInputChange} name="password"/>
+          { this.state.isPasswordVisible ?
+            <img src={require("../images/open-eye.jpg").default} className="w-25" onClick={() => this.isPasswordVisible()}/>
+            :
+            <img src={require("../images/close-eye.png").default} className="w-25" onClick={() => this.isPasswordVisible()}/>
+          }
         </div>
         <div>
           <button onClick={() => this.onSubmitLogin()}>Login</button>

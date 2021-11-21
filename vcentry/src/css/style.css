@@ -61,8 +61,19 @@
 .input{
   font-size: 18px;
   width: 250px;
+  margin-right: 10px;
 }
 
 .m-bottom-8{
   margin-bottom: 8px;
+}
+
+.w-25{
+  width: 25px;
+}
+
+.icon-align{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
