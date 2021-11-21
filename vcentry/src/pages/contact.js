@@ -33,7 +33,7 @@ class ContactPage extends Component {
       password: false,
     }
     for (var key in this.state.login_data) {
-      error[key] = this.state.login_data[key] == "" ? true : false    
+      error[key] = this.state.login_data[key] === "" ? true : false    
     }
 
     this.setState({
@@ -75,9 +75,9 @@ class ContactPage extends Component {
           <label className="label">Enter your Password :</label>
           <input className="input" type={this.state.isPasswordVisible ? "text" : "password"} placeholder="Please enter your password.." onChange={this.onInputChange} name="password" />
           {this.state.isPasswordVisible ?
-            <img src={require("../images/open-eye.jpg").default} className="w-25" onClick={() => this.isPasswordVisible()} />
+            <img alt="" src={require("../images/open-eye.jpg").default} className="w-25" onClick={() => this.isPasswordVisible()} />
             :
-            <img src={require("../images/close-eye.png").default} className="w-25" onClick={() => this.isPasswordVisible()} />
+            <img alt="" src={require("../images/close-eye.png").default} className="w-25" onClick={() => this.isPasswordVisible()} />
           }
 
           {this.state.error.password && <span className="error-msg">Please enter a valid Email ID</span>}
@@ -101,12 +101,12 @@ class ContactPage extends Component {
             this.state.showIfElse ?
               <div>
                 <h1>Successfully Authenticated</h1>
-                <img src={require("../images/shinchu.jpg").default} style={{ width: "400px" }} />
+                <img alt="" src={require("../images/shinchu.jpg").default} style={{ width: "400px" }} />
               </div>
               :
               <div>
                 <h1>Sorry! Faild to Authenticate</h1>
-                <img src={"http://prod-upp-image-read.ft.com/a4e8f394-313b-11ea-a329-0bcf87a328f2"} style={{ width: "400px" }} />
+                <img alt="" src={"http://prod-upp-image-read.ft.com/a4e8f394-313b-11ea-a329-0bcf87a328f2"} style={{ width: "400px" }} />
               </div>
           }
         </div>
