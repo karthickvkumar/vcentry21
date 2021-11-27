@@ -34,7 +34,7 @@ class InboxPage extends Component {
           <td>{value.last_name}</td>
           <td>{value.email}</td>
           <td>
-            <img src={value.avatar} className="dp-image" />
+            <img src={value.avatar} className="dp-image" alt=""/>
           </td>
         </tr>
       )
