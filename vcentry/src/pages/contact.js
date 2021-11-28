@@ -39,6 +39,8 @@ class ContactPage extends Component {
     this.setState({
       error : {...error}
     })
+
+    this.props.history.push("/", this.state.login_data);
   }
 
   showAndHide() {
