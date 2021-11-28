@@ -11,7 +11,8 @@ class Mail extends Component {
   constructor(props){
     super(props);
     this.state = {
-      searchText : ""
+      searchText : "",
+      incommingMessage : ""
     }
   }
 
@@ -21,10 +22,18 @@ class Mail extends Component {
     })
   }
 
+  onReceiveValue = (value) =>{
+    console.log(value);
+    this.setState({
+      incommingMessage : value
+    })
+  }
+
   render() {
     return (
       <div>
         <div className="header">
+          <span>{this.state.incommingMessage}</span>
           <input type="text" className="input-border" onChange={this.onHandleInput}/>
         </div>
         <div className="body">
@@ -50,7 +59,9 @@ class Mail extends Component {
               <Route path="/mail/trash" render={
                 () => {
                   return(
-                    <TrashPage inputData={this.state.searchText}></TrashPage>
+                    <TrashPage inputData={this.state.searchText} 
+                      inputFunction={this.onReceiveValue}
+                    ></TrashPage>
                   )
                 }
               }></Route>
