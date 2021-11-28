@@ -5,6 +5,7 @@ class TrashPage extends Component {
     return (
       <div>
         <h1>This ia a Trash Page</h1>
+        <h1>{this.props.inputData}</h1>
       </div>
     );
   }

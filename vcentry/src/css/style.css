@@ -12,6 +12,11 @@
 .header{
   border: 2px solid red;
   height: 10vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
 }
 
 .body{
@@ -108,4 +113,17 @@
 .dp-image{
   width: 40px;
   border-radius: 50px;
+}
+
+.input-border{
+  height: 30px;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+}
+.input-border:focus{
+  height: 30px;
+  border-top: none;
+  border-right: none;
+  border-left: none;
 }

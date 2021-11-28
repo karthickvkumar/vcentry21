@@ -7,10 +7,26 @@ import StarredPage from "./mail-box/starred";
 import TrashPage from "./mail-box/trash";
 
 class Mail extends Component {
+
+  constructor(props){
+    super(props);
+    this.state = {
+      searchText : ""
+    }
+  }
+
+  onHandleInput = (event) => {
+    this.setState({
+      searchText : event.target.value
+    })
+  }
+
   render() {
     return (
       <div>
-        <div className="header"></div>
+        <div className="header">
+          <input type="text" className="input-border" onChange={this.onHandleInput}/>
+        </div>
         <div className="body">
           <div className="sidebar">
             <div className="button-space">
@@ -31,7 +47,13 @@ class Mail extends Component {
               <Route path="/mail/inbox" component={InboxPage}></Route>
               <Route path="/mail/starred" component={StarredPage}></Route>
               <Route path="/mail/draft" component={DraftPage}></Route>
-              <Route path="/mail/trash" component={TrashPage}></Route>
+              <Route path="/mail/trash" render={
+                () => {
+                  return(
+                    <TrashPage inputData={this.state.searchText}></TrashPage>
+                  )
+                }
+              }></Route>
             </Switch>
           </div>
         </div>
