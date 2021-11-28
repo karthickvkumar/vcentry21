@@ -10,6 +10,10 @@ class InboxPage extends Component {
     }
   }
 
+  componentDidMount(){
+    this.loadAPI();
+  }
+
   loadAPI() {
     const url = "https://reqres.in/api/users?page=2";
 
@@ -45,15 +49,18 @@ class InboxPage extends Component {
         <h1>This is a Inbox Page</h1>
         <button onClick={() => this.loadAPI()}>Load User Data API</button>
         <table id="customers">
-          <tr>
-            <th>ID</th>
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th>Email</th>
-            <th>Picture</th>
-          </tr>
-          {users}
-
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>First Name</th>
+              <th>Last Name</th>
+              <th>Email</th>
+              <th>Picture</th>
+            </tr>
+          </thead>
+          <tbody>
+            {users}
+          </tbody>
         </table>
       </div>
     );
