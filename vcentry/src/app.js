@@ -11,7 +11,7 @@ import "./css/style.css";
 
 import configureStore from "./redux/store/redux-store";
 const reduxStore = configureStore();
-
+  
 class App extends Component{
 
   render(){

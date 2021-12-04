@@ -1,4 +1,9 @@
 import React, { Component } from "react";
+import { NavLink } from "react-router-dom";
+
+import {connect} from "react-redux";
+import {bindActionCreators} from 'redux';
+import * as userAction from "../redux/action/user-action";
 
 class AboutPage extends Component{
 
@@ -15,7 +20,8 @@ class AboutPage extends Component{
         languages : [],
         address : '',
         city : ''
-      }
+      },
+      userList : []
     }
   }
 
@@ -42,10 +48,28 @@ class AboutPage extends Component{
   }
 
   onUserCreate(){
-    console.log(this.state.register_form)
+    this.props.action.addUser(this.state.register_form);
+    this.state.userList.push(this.state.register_form);
+    this.setState({
+      userList : this.state.userList
+    })
   }
 
   render(){
+
+    let users = this.state.userList.map((value, index) => {
+      return(
+        <tr key={index}>
+          <td>{value.first_name} {value.last_name}</td>
+          <td>{value.email_id}</td>
+          <td>{value.gender}</td>
+          <td>{value.data_of_birth}</td>
+          <td>{value.address}</td>
+          <td>{value.city}</td>
+        </tr>
+      )
+    })
+
     return(
       <div>
         <h1>This is a About Page</h1>
@@ -105,9 +129,37 @@ class AboutPage extends Component{
         <div className="m-bottom-8">
           <button onClick={() => this.onUserCreate()}>Create User</button>
         </div>
+        <NavLink to="/mail/draft">Go to Draft Page</NavLink>
+        <div>
+          <table id="customers">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Email ID</th>
+                <th>Gender</th>
+                <th>Date of Birth</th>
+                <th>Address</th>
+                <th>City</th>
+              </tr>
+            </thead>
+            <tbody>
+              {users}
+            </tbody>
+          </table>
+        </div>
       </div>
     )
   }
 }
 
-export default AboutPage;
+function mapStateToProps(state){
+  return {}
+}
+
+function mapDispatchToProps(dispatch){
+  return{
+    action : bindActionCreators(userAction, dispatch)
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(AboutPage);
