@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 
 const StateLess = () => {
   let [message, displayMessage] = useState("");
@@ -22,6 +22,10 @@ const StateLess = () => {
      ...form, [event.target.name] : event.target.value
     })
   }
+
+  useEffect(() => {
+    console.log("It will work like a component did mount")
+  },[])
 
   return (
     <div>
