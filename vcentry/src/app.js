@@ -7,6 +7,8 @@ import HomePage from "./pages/home";
 import ContactPage from "./pages/contact";
 import AboutPage from "./pages/about";
 import Mail from "./pages/mail";
+import StateLess from "./pages/stateless";
+
 import "./css/style.css"; 
 
 import configureStore from "./redux/store/redux-store";
@@ -24,6 +26,7 @@ class App extends Component{
             <Route path="/contact-us" component={ContactPage}></Route>
             <Route path="/about" component={AboutPage}></Route>
             <Route path="/mail" component={Mail}></Route>
+            <Route path="/state" component={StateLess}></Route>
           </Switch>
         </BrowserRouter>
       </Provider>
