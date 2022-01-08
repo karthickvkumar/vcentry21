@@ -44,9 +44,25 @@ app.post("/api/user/create", (request, response) => {
   response.status(200).send("Successfully Created a New User");
 });
 
-app.put("/api/user/edit", (request, response) => {
+app.put("/api/user/edit/:id", (request, response) => {
+  const id = request.params.id;
 
+  const username = request.body.name;
+  const userage = request.body.age;
+
+  userRecord[id - 1].name = username;
+  userRecord[id - 1].age = userage;
+  response.status(200).send("Successfully Updated the User information");
+  
 });
+
+app.delete("/api/user/delete/:id", (request, response) => {
+  const id = request.params.id;
+
+  userRecord.splice(id - 1, 1);
+  response.status(200).send("Deleted the User information");
+
+})
 
 
 const port = process.env.PORT || 8080;
