@@ -12,6 +12,20 @@ app.use(cors({
 }));
 app.use(express.json());
 
+let userRecord = [
+  {
+    name : "Mr.Abc",
+    age : 24
+  },
+  {
+    name : "Mr.Xyz",
+    age : 25
+  },
+];
+
+app.get("/api/user/list", (request, response) => {
+  response.status(200).send(userRecord);
+});
 
 
 const port = process.env.PORT || 8080;
