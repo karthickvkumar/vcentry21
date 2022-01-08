@@ -15,16 +15,37 @@ app.use(express.json());
 let userRecord = [
   {
     name : "Mr.Abc",
-    age : 24
+    age : 24,
+    id : 1
   },
   {
     name : "Mr.Xyz",
-    age : 25
+    age : 25,
+    id : 2
   },
 ];
 
 app.get("/api/user/list", (request, response) => {
   response.status(200).send(userRecord);
+});
+
+app.post("/api/user/create", (request, response) => {
+  const username = request.body.name;
+  const userage = request.body.age;
+  const uniqueId = userRecord.length + 1;
+
+  const newUser = {
+    name : username,
+    age : userage,
+    id : uniqueId
+  }
+
+  userRecord.push(newUser);
+  response.status(200).send("Successfully Created a New User");
+});
+
+app.put("/api/user/edit", (request, response) => {
+
 });
 
 
