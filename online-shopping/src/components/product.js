@@ -13,6 +13,7 @@ class Product extends Component {
 
   seeDetail(value){
     // this.props.history.push("/product", value.id);
+    localStorage.setItem('product-id', value.id);
   }
 
   addProduct(value){
@@ -34,7 +35,7 @@ class Product extends Component {
               <div className="product-hover">
                 <a onClick={() => this.addProduct(value)} href="#" className="add-to-cart-link"><i className="fa fa-shopping-cart"></i> Add to
                   cart</a>
-                <NavLink to="/product" className="view-details-link"><i
+                <NavLink to="/product" onClick={() => this.seeDetail(value)} className="view-details-link"><i
                   className="fa fa-link"></i> See details</NavLink>
               </div>
             </div>
